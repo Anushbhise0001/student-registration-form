@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="registration_form" action="./upload/" method="post">
+            <button type="button" class="close-btn" onclick="closeWindow()" title="Close button">&times;</button>
+            <h1> -Registration Form- </h1>
+            <h2>Student Information</h2>
+            <div class="Student_information">
+                <div class="sn_info">
+                    <label for="Fname">First Name</label>
+                    <input type="text" name="Fname" id="Fname" placeholder="First name" required />
+                </div>
+                <div class="sn_info">
+                    <label for="Mname">Middle Name</label>
+                    <input type="text" name="Mname" id="Mname" placeholder="Middle name" />
+
+                </div>
+                <div class="sn_info">
+                    <label for="Lname">Last Name</label>
+                    <input type="text" name="Lname" id="Lname" placeholder="Last name" required />
+                </div>
+            </div>
+            <div class="Student_information1">
+                <label for="dob">Date of birth</label>
+                <input type="date" name="dob" id="dob" placeholder="Date of birth" required />
+
+
+                <label for="Sid">Student Id</label>
+                <input type="number" name="Sid" id="Sid" placeholder="Student ID" required />
+            </div>
+            <div class="Student_information2">
+                <div class="gender_details">
+                    <span class="gender_title">Gender</span>
+                    <div class="gender_cetegeris">
+                        <div class="sn_info">
+                            <input type="radio" id="male" name="Gender" value="male" checked />
+                            <label for="Gender" id="Gen">Male</label>
+                        </div>
+                        <div class="sn_info">
+                            <input type="radio" id="female" name="Gender" value="female" />
+                            <label for="Gender" id="Gen">Female</label>
+                        </div>
+                        <div class="sn_info">
+                            <input type="radio" id="other" name="Gender" value="other" />
+                            <label for="Gender" id="Gen">Other</label>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="other-ditals">
+                    <span class="nationality">Nationality</span>
+                    <input type="text" id="nation" placeholder="Ex. Indian" class="form-control" required>
+                </div>
+
+
+                <div class="other-ditals">
+                    <span class="religion">Religion</span>
+                    <input type="text" id="religion" class="form-control" required>
+                </div>
+
+
+                <div class="cetegeris">
+                    <span class="cast">Cast</span>
+                    <input type="radio" id="SC" name="cast" value="SC" />
+                    <label for="sc">SC</label>
+                    <input type="radio" id="ST" name="cast" value="ST" />
+                    <label for="st">ST</label>
+                    <input type="radio" id="OBC" name="cast" value="OBC" />
+                    <label for="Obc">OBC</label>
+                    <input type="radio" id="GEN" name="cast" value="GEN" />
+                    <label for="Genral">GEN.</label>
+                </div>
+            </div>
+            <h2>Address</h2>
+            <div class="Student_information3">
+                <label for="add" id="add">Present Address</label>
+                <input type="text" name="aad" id="Aadress" placeholder="Present Address" required /><br>
+            </div>
+            <div class="Student_information4">
+
+                <label for="country" id="country">Country</label>
+                <input type="text" name="country" id="Country" placeholder="Country" required />
+
+
+                <label for="state" id="country">State</label>
+                <input type="text" name="state" id="state" placeholder="State" required />
+
+
+                <label for="city" id="country">City</label>
+                <input type="text" name="city" id="city" placeholder="City" required />
+
+
+                <label for="pin" id="country">Pincode</label>
+                <input type="number" name="pin" id="pin" placeholder="Pincode" required maxlength="6" />
+            </div>
+            <h2>Contact</h2>
+            <div class="Student_information4">
+                <label for="email" id="email">Email</label>
+                <input type="email" name="Email" id="Email" placeholder="Email" required />
+                <label for="phone_no" id="email">Phone no.</label>
+                <input type="tel" name="phone_no" id="phone_no" placeholder="+91" required />
+                <label for="phone_no1" id="email">Phone no. 2(optional)</label>
+                <input type="tel" name="phone_no1" id="phone_no1" placeholder="+91" />
+            </div>
+            <h2>Course</h2>
+            <div class="Student_information4">
+                <label class="last">Course</label>
+                <div class="dropdown">
+                    <select id="first-menu" class="dropdown-select">
+                        <option value="basic">Basic</option>
+                        <option id="option1" value="option1">DCA</option>
+                        <option id="option1" value="option1">PGDCA</option>
+                        <option id="option1" value="option1">BCA</option>
+                        <option id="option1" value="option2">TALLY</option>
+                        <option id="option2" value="option2">DTP</option>
+                    </select>
+                </div>
+                <label id="last">Semester</label>
+                <div class="dropdown">
+                    <select id="second-menu" class="dropdown-select" disabled>
+                        <option value="1">1 Semester</option>
+                        <option value="2">2 Semester</option>
+                        <option value="3">3 Semester</option>
+                        <option value="4">4 Semester</option>
+                        <option value="5">5 Semester</option>
+                        <option value="6">6 Semester</option>
+                    </select>
+                </div>
+                <label id="last">Level</label>
+                <div class="dropdown">
+                    <select id="third-menu" class="dropdown-select" disabled>
+                        <option value="Basic">Basic</option>
+                        <option value="First Level">First Level</option>
+                        <option value="Second Level">Second Level</option>
+                        <option value="Third Level">Third Level</option>
+                        <option value="Addvance">Addvance</option>
+                    </select>
+                </div>
+                <label for="reg_date" id="reg_date1">Registration Date</label>
+                <input type="date" name="date" id="reg_date" placeholder="Date" required />
+            </div>
+            <textarea placeholder="Comments"></textarea>
+            <button name="register">Register</button>
+
+
+        </form>
+    </div>
+    <footer class="footer">
+        <p>Made with <i class="ph-fill ph-heart" style="color: #ff0000e8; background-color: transparent;"></i>
+            by Anush Bhise copyright&copy; 2024 </p>
+    </footer>
+</body>
+
+</html>
